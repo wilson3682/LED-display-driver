@@ -54,7 +54,7 @@ uint16_t extCount;
 #define FONT_WIDTH 5
 
 // Not a 2d array because the PROGMEM macro can't handle them
-prog_uchar font[FONT_COUNT * FONT_WIDTH] PROGMEM = {
+const unsigned char font[FONT_COUNT * FONT_WIDTH] PROGMEM = {
   0x7f, 0x41, 0x41, 0x41, 0x7f, // fail char (unicode block)
   0x00, 0x00, 0x00, 0x00, 0x00, // space
   0x00, 0x00, 0x7d, 0x00, 0x00, // !
@@ -636,7 +636,7 @@ unsigned char backColor;
 int scrollPosition;
 
 // Default message
-prog_uchar startMessage[] PROGMEM =
+const unsigned char startMessage[] PROGMEM =
   "\x1d" "0"                      // background color = black
   "\x1c" "3" "Welcome to "        // text color = yellow, text "Welcome to"
   "\x1c" "1" "Hack Pittsburgh  "  // text color = green, text "Hack Pittsburgh"
